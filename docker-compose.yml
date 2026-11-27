@@ -99,3 +99,5 @@ volumes:
   kafka1-data:
   kafka2-data:
   kafka3-data:
+
+test:
