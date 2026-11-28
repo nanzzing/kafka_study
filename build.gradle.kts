@@ -1,19 +1,20 @@
 plugins {
-    id("java")
+    java
 }
 
-group = "org.example"
+group = "com.kafka.study"
 version = "1.0-SNAPSHOT"
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(18))
+    }
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
-
-tasks.test {
-    useJUnitPlatform()
+    implementation("org.apache.kafka:kafka-clients:4.4.0")
 }
